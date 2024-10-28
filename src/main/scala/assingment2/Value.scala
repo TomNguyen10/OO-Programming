@@ -280,7 +280,6 @@ case object FalseValue extends BoolValue:
         FalseValue
       case Message("=", Seq(FalseValue)) =>
         TrueValue
-      // Note that we consider "false" to be less than "true"
       case Message("<", Seq(TrueValue)) =>
         TrueValue
       case Message("<", Seq(FalseValue)) =>
